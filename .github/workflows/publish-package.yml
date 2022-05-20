@@ -1,0 +1,17 @@
+name: Publish NPM Package
+
+on:
+  push:
+    branches:
+      - main2
+  workflow_dispatch:
+
+jobs:
+  npm-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Publish
+        uses: verdaccio/github-actions/publish@v0.1.0
+        with:
+          args: -d

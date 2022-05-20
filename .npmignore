@@ -1,0 +1,13 @@
+tsconfig.json
+tsconfig.build.json
+src
+coverage
+node_modules
+tests
+.github
+.vscode
+config/.eslintrc
+config/changelog-template.hbs
+CHANGELOG.md
+CODEOWNERS
+.npmrc

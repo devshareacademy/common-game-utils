@@ -1,0 +1,81 @@
+{
+	"name": "@devshareacademy/common-game-utils",
+	"version": "0.0.1",
+	"description": "Variety of helpful functions that are helpful for game development.",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"publish:npm": "npm publish --registry https://registry.npmjs.org/ --access public --ignore-scripts",
+		"publish:github": "npm publish --registry https://npm.pkg.github.com/ --ignore-scripts",
+		"lint": "eslint ./src --ext .ts,.tsx --config ./config/.eslintrc",
+		"version": "auto-changelog -p && git add CHANGELOG.md",
+		"test": "jest --group=unit --runInBand",
+		"test:group:unit": "jest --group=unit --coverage=false --runInBand",
+		"test:group:e2e": "jest --group=e2e --coverage=false --runInBand"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/devshareacademy/common-game-utils.git"
+	},
+	"keywords": [
+		"eslint",
+		"eslintconfig"
+	],
+	"author": {
+		"name": "Scott Westover",
+		"email": "scottwestover2006@gmail.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/devshareacademy/common-game-utils/issues"
+	},
+	"homepage": "https://github.com/devshareacademy/common-game-utils#readme",
+	"devDependencies": {
+		"@devshareacademy/eslint-config": "0.0.16",
+		"@devshareacademy/prettier-config": "0.0.4",
+		"@devshareacademy/tsconfig": "0.0.3",
+		"@types/jest": "27.5.0",
+		"@typescript-eslint/eslint-plugin": "5.22.0",
+		"@typescript-eslint/parser": "5.22.0",
+		"auto-changelog": "2.4.0",
+		"eslint": "8.14.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-prettier": "4.0.0",
+		"jest": "28.0.3",
+		"jest-runner-groups": "2.1.0",
+		"prettier": "2.6.2",
+		"ts-jest": "28.0.1",
+		"typescript": "4.6.4"
+	},
+	"dependencies": {},
+	"prettier": "@devshareacademy/prettier-config",
+	"volta": {
+		"node": "16.15.0",
+		"yarn": "1.22.11"
+	},
+	"jest": {
+		"runner": "groups",
+		"testEnvironment": "node",
+		"collectCoverageFrom": [
+			"src/**/*.ts"
+		],
+		"collectCoverage": false,
+		"coverageDirectory": "coverage",
+		"transform": {
+			"^.+\\.tsx?$": "ts-jest"
+		},
+		"testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+		"moduleFileExtensions": [
+			"ts",
+			"js",
+			"json",
+			"node"
+		]
+	},
+	"auto-changelog": {
+		"template": "config/changelog-template.hbs",
+		"unreleased": true,
+		"commitLimit": false
+	}
+}

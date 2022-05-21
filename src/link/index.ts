@@ -1,4 +1,4 @@
-export default function openExternalLink(url: string): void {
+export function openExternalLink(url: string): void {
   const s = window.open(url, '_blank');
 
   if (s && s.focus) {

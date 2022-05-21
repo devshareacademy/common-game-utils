@@ -1,4 +1,4 @@
-import { Storage } from './types';
+import type { Storage } from './types';
 
 export default class InMemoryStorage implements Storage {
   private data: { [key: string]: string };

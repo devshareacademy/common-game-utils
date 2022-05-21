@@ -15,3 +15,7 @@ export function shuffleArray<T>(array: T[]): void {
     array[j] = temp;
   }
 }
+
+export function rangeOfNumbers(min: number, max: number): number[] {
+  return Array.from({ length: max - min + 1 }, (_, i) => min + i);
+}

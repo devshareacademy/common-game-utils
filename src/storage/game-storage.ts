@@ -1,7 +1,6 @@
+import type { Storage } from './types';
 import InMemoryStorage from './in-memory-storage';
 import LocalStorage from './local-storage';
-import { Storage } from './types';
-
 export default class GameStorage implements Storage {
   private static gameStorage: GameStorage;
 

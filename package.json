@@ -1,6 +1,6 @@
 {
 	"name": "@devshareacademy/common-game-utils",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Variety of helpful functions that are helpful for game development.",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

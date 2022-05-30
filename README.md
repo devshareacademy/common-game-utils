@@ -13,7 +13,13 @@ yarn add -E @devshareacademy/common-game-utils
 
 ## Usage
 
-Coming Soon...
+```typescript
+import * as GameUtils from '@devshareacademy/common-game-utils';
+
+GameUtils.array.shuffleArray([1, 2, 3]);
+```
+
+For more details on the library and the available methods, please see the documentation here: TODO.
 
 ## Local Development
 
